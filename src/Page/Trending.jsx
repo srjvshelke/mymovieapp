@@ -24,10 +24,10 @@ const Trending = () => {
             {/* body */}
             <div className='Trending_body flex'>
                 {
-                    datafortrend.slice(0,10).map((ele, index) => {
+                    datafortrend.slice(0, 10).map((ele, index) => {
                         return (
                             <>
-                                <Card img={ele.poster_path} name={ele.title || ele.name} date={ele.release_date || ele.first_air_date} type={ele.media_type}/>
+                                <Card img={ele.poster_path} name={ele.title || ele.name} date={ele.release_date || ele.first_air_date} type={ele.media_type} />
                             </>
                         )
 
@@ -42,9 +42,16 @@ const Trending = () => {
             </div>
 
             {/* footer */}
-            <div className='Trending_footer'>
-
-            </div>
+                {/* <div class="pagination">
+                    <a href="#">&laquo;</a>
+                    <a href="#">1</a>
+                    <a href="#" class="active">2</a>
+                    <a href="#">3</a>
+                    <a href="#">4</a>
+                    <a href="#">5</a>
+                    <a href="#">6</a>
+                    <a href="#">&raquo;</a>
+                </div> */}
         </div>
 
     );
