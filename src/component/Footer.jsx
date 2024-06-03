@@ -8,23 +8,23 @@ function Footer() {
   return (
     <div className="footer">
       <div className='icon'>
-        <WhatshotIcon />
-        <h2>Trending</h2>
+        <WhatshotIcon  />
+        <h6>Trending</h6>
       </div>
       <div className='icon'>
         <MovieIcon />
-        <h2>MOvie</h2>
+        <h6>MOvie</h6>
       </div>
 
       <div className='icon'>
         <TvIcon />
-        <h2>TV Show</h2>
+        <h6>TV Show</h6>
       </div>
 
 
       <div className='icon'>
         <FindInPageIcon />
-        <h2>Search</h2>
+        <h6>Search</h6>
       </div>
 
 

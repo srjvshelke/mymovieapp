@@ -6,17 +6,17 @@ function Card(props) {
         <div className='card'>
             {/* image */}
             <div className='img'>
-                <img src={`https://image.tmdb.org/t/p/w300${props.img}` }/>
+                <img src={`https://image.tmdb.org/t/p/w300${props.img}`} />
             </div>
             {/* heading */}
-            <div>
-                <h2>{props.name}</h2>
+            <div className='card_title'>
+                <h4>{props.name}</h4>
             </div>
 
             {/* details */}
             <div className='card_details'>
-                <h2>movie</h2>
-                <h2>{props.date}</h2>
+                <h5>{props.type}</h5>
+                <h5>{props.date}</h5>
             </div>
         </div>
     )
