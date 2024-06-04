@@ -6,7 +6,7 @@ import FindInPageIcon from '@mui/icons-material/FindInPage';
 
 function Footer() {
   return (
-    <div className="footer">
+    <div className="footer bottomsticky">
       <div className='icon'>
         <WhatshotIcon  />
         <h6>Trending</h6>
