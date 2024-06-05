@@ -17,6 +17,11 @@ const Trending = () => {
         fetchTrending();
     }, [])
 
+    const selectPageHandler = (selectedPage) => {
+        // if (selectedPage >= 1 && selectedPage <= products.length / 10 && selectedPage !== page) {
+          setPage(selectedPage)
+        // }
+      }
     return (
         <div className='Trending'>
             {/* heading */}
@@ -48,7 +53,7 @@ const Trending = () => {
                             return <span key={i} className={page === i + 1 ? "pagination__selected" : ""} >{i + 1}</span>
                         })
                     }
-                    <span onClick={() => selectPageHandler(page + 1) } className={page < datafortrend.length / 10 ? "" : "pagination__disable"}>▶</span>
+                    <span onClick={() => selectPageHandler(i + 1) } className={page < datafortrend.length / 10 ? "" : "pagination__disable"}>▶</span>
                 </div>
             </div>
         </div>
