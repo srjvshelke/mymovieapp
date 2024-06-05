@@ -92,6 +92,10 @@
   padding: 2px;
   margin-inline: 10px;
   margin-block: 5px;
+  /* display: flex; */
+  flex-direction: column;
+  /* justify-content: center; */
+  /* align-items: center; */
 }
 
 img {
@@ -130,10 +134,15 @@ img {
   width: 100%;
   color: black;
 }
-
-.Trending_body {
+.bodypagin{
   height: 90%;
   width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.Trending_body {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -167,7 +176,20 @@ img {
  */
  .pagination {
 /* bottom: 0; */
-  display: inline-block;
+  /* display: inline-block; */
+  padding: 10px;
+  margin: 15px 0;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+}
+.pagination > span{
+  padding: 15px 20px;
+  border: 1px solid gray;
+  cursor: pointer;
+}
+.pagination__selected{
+  background-color: rgb(220, 220, 220);
 }
 
 /* .pagination a {
