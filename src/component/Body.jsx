@@ -4,7 +4,7 @@ import Trending from '../Page/Trending';
 function Body() {
   return (
     <div className='body'>
-      <Trending/>
+      {/* <Trending/> */}
     </div>
   );
 };

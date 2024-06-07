@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Card from "../component/Card"
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import Pagination from '../component/Pagination';
 
 const Trending = () => {
 
@@ -16,13 +17,7 @@ const Trending = () => {
         fetchTrending();
     }, [])
 
-    const selectPageHandler = (selectedPage) => {
-        let length = datafortrend.length % 10== 0 ? datafortrend.length / 10: Math.floor(datafortrend.length / 10) + 1
-
-        if (selectedPage >= 1 && selectedPage <= length && selectedPage !== page) {
-            setPage(selectedPage)
-        }
-    }
+   
     return (
         <div className='Trending'>
             {/* heading */}
@@ -46,18 +41,12 @@ const Trending = () => {
 
                 </div>
 
-                {/* footer */}
-                <div class="pagination">
-                    <span onClick={() => selectPageHandler(page - 1)} className={page > 1 ? "" : "pagination__disable"}>◀</span>
-                    {
-                        [...Array(datafortrend.length %10== 0 ? datafortrend.length /10: Math.floor(datafortrend.length / 10) + 1)].map((ele, i) => {
-                            return <span key={i} onClick={() => selectPageHandler(i + 1)} className={page === i + 1 ? "pagination__selected" : ""}  >{i + 1}</span>
-                        })
-                    }
-                    <span onClick={() => selectPageHandler(page + 1)} className={page < datafortrend.length /10? "" : "pagination__disable"}>▶</span>
-                </div>
+                {/* pagination */}
+                <Pagination datafortrend={datafortrend} page={page} setPage={setPage}/>
+              
             </div>
         </div>
+
 
     );
 }
