@@ -17,33 +17,35 @@ const Trending = () => {
         fetchTrending();
     }, [])
 
-   
+
     return (
-        <div className='Trending'>
-            {/* heading */}
-            <div className='Trending_heading flex'>
-                <h2> Trending Page</h2>
-            </div>
-
-            {/* body */}
-            <div className="bodypagin">
-                <div className='Trending_body flex'>
-                    {
-                        datafortrend.slice(page * 10- 10, page * 10).map((ele, index) => {
-                            return (
-                                <>
-                                    <Card img={ele.poster_path} name={ele.title || ele.name} date={ele.release_date || ele.first_air_date} type={ele.media_type} />
-                                </>
-                            )
-
-                        })
-                    }
-
+        <div className='body'>
+            <div className='Trending flex'>
+                {/* heading */}
+                <div className='Trending_heading flex'>
+                    <h2> Trending Page</h2>
                 </div>
 
-                {/* pagination */}
-                <Pagination datafortrend={datafortrend} page={page} setPage={setPage}/>
-              
+                {/* body */}
+                <div className="bodypagin">
+                    <div className='Trending_body'>
+                        {
+                            datafortrend.slice(page * 10 - 10, page * 10).map((ele, index) => {
+                                return (
+                                    <>
+                                        <Card img={ele.poster_path} name={ele.title || ele.name} date={ele.release_date || ele.first_air_date} type={ele.media_type} />
+                                    </>
+                                )
+
+                            })
+                        }
+
+                    </div>
+
+                    {/* pagination */}
+                    <Pagination datafortrend={datafortrend} page={page} setPage={setPage} />
+
+                </div>
             </div>
         </div>
 

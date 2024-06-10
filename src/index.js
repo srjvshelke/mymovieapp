@@ -47,11 +47,11 @@ import { Outlet, Route, RouterProvider, Routes, createBrowserRouter, createRoute
 const route = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<App />}>
-      <Route path='' element={<Body />} />
-     <Route path="Trending" element= {<Trending />}/>
-      <Route path= "Movie" element= {<Movie />}/>
-      <Route path= "Tvshow" element= {<Tvshow />} />
-      <Route path= "Search" element= {<Search />} />
+      <Route path='' element={<Trending />} />
+      <Route path="Trending" element={<Trending />} />
+      <Route path="Movie" element={<Movie />} />
+      <Route path="Tvshow" element={<Tvshow />} />
+      <Route path="Search" element={<Search />} />
     </Route>
   )
 )
